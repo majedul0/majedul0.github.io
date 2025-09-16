@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects — Majedul Islam</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <div class="logo">RTM</div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="skills.html">Skills</a>
+        <a href="education.html">Education</a>
+        <a href="projects.html">Projects</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="projects">
+      <div class="container">
+        <h1 class="section-title">Projects</h1>
+        <p class="subtitle">Selected works showcasing web, app, and backend skills.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="projects-grid">
+          <article class="project-card is-queued" data-delay="0">
+            <div class="project-media"><img src="project1.png" alt="DIU Smart Parking preview"></div>
+            <div class="project-body">
+              <h4 class="project-title">DIU Vehicle Parking — Smart Parking System</h4>
+              <p class="project-desc">Smart parking management for Daffodil International University: login, secure access, and modern UI.</p>
+              <div class="project-tags"><span>Web</span><span>Management System</span></div>
+              <div class="project-cta"><a class="btn btn-outline" href="https://github.com/majedul0/DIU-Parking" target="_blank" rel="noopener">Code</a><a class="btn btn-primary" href="https://majedul0.github.io/DIU-Parking/" target="_blank" rel="noopener">Live</a></div>
+            </div>
+          </article>
+          <article class="project-card is-queued" data-delay="1">
+            <div class="project-media"><img src="project2.png" alt="MERN E-commerce preview"></div>
+            <div class="project-body">
+              <h4 class="project-title">MERN E‑commerce</h4>
+              <p class="project-desc">Full‑stack storefront with auth, cart, payments, and admin dashboard.</p>
+              <div class="project-tags"><span>MERN</span><span>JWT</span><span>Stripe</span></div>
+              <div class="project-cta"><a class="btn btn-outline" href="#" target="_blank">Code</a><a class="btn btn-primary" href="https://www.geeksforgeeks.org/mern/e-commerce-website-using-mern-stack/" target="_blank" rel="noopener">Live</a></div>
+            </div>
+          </article>
+          <article class="project-card is-queued" data-delay="2">
+            <div class="project-media"><img src="project3.png" alt="Flutter News App preview"></div>
+            <div class="project-body">
+              <h4 class="project-title">Flutter News App</h4>
+              <p class="project-desc">Cross‑platform app with API integration, offline cache, and theming.</p>
+              <div class="project-tags"><span>Flutter</span><span>Dart</span><span>REST</span></div>
+              <div class="project-cta"><a class="btn btn-outline" href="#" target="_blank">Code</a><a class="btn btn-primary" href="#" target="_blank">Live</a></div>
+            </div>
+          </article>
+          <article class="project-card is-queued" data-delay="3">
+            <div class="project-media"><img src="project4.png" alt="Image Classifier ML preview"></div>
+            <div class="project-body">
+              <h4 class="project-title">Image Classifier</h4>
+              <p class="project-desc">CNN model training with TensorFlow; experiment tracking and reports.</p>
+              <div class="project-tags"><span>TensorFlow</span><span>Python</span><span>ML</span></div>
+              <div class="project-cta"><a class="btn btn-outline" href="#" target="_blank">Code</a><a class="btn btn-primary" href="#" target="_blank">Live</a></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Majedul Islam. All rights reserved.</p>
+      <div class="made-with-love">
+        <p class="text">Made with love by <span class="name">Majedul Islam</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const observer = new IntersectionObserver((entries)=>{
+      entries.forEach((e)=>{
+        if(e.isIntersecting){ e.target.classList.add('is-visible'); }
+      })
+    }, { threshold: 0.2 });
+    document.querySelectorAll('.project-card').forEach((el)=> observer.observe(el));
+  </script>
+</body>
+</html>
+
